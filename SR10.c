@@ -52,7 +52,11 @@ int output(int qty, int *array)//function of output
   {
    if (i==qty)
    {
-	printf("\n|    Value    |");//output of values
+	if (i%5!=0)
+	{
+	 printf("\n");
+	}
+	printf("|    Value    |");//output of values
 	if (i%5==0)
 	 cycles=5;
 	else
