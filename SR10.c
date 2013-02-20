@@ -6,13 +6,17 @@
 #define QTY_2 8
 #define QTY_3 6
 
+int arraycount[9];
+
 int filling(int a, int b, int qty, int *array); //functions prototypes
 int output(int qty, int *array);
+int null(int qty,int *array);
+int maximum(int qty, int *array, int max);
 
 int main(void)//main function
 {
- int a,b,array_1[QTY_1],array_2[QTY_2]; //declaration of variables
- printf("Enter a and b: ");//input
+ int a,b,array_1[QTY_1],array_2[QTY_2],; //declaration of variables
+ printf("Enter limits: ");//input
  scanf("%d %d", &a,&b);
  filling(a,b,QTY_1,array_1);//filling arrays with numbers
  filling(a,b,QTY_2,array_2);
@@ -71,3 +75,11 @@ int output(int qty, int *array)//function of output
  }
 }
 
+int null(int qty, int *array)//function of
+{
+ int i;//declaration of variables
+ for (i = 1; i <=qty; i++)//filling array
+ {
+  array[i-1]=0;
+ }
+}
