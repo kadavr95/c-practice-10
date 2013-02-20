@@ -28,7 +28,7 @@ int filling(int a, int b, int qty, int *array)//function of filling array
  int i;//declaration of variables
  for (i = 1; i <=qty; i++)//filling array
  {
-  array[i-1]=a*i+b;
+  array[i-1]=a+b*rand()/RAND_MAX;
  }
 }
 
