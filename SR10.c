@@ -22,7 +22,6 @@ int main(void)//main function
  ltime=time(NULL);
  stime=(unsigned) ltime/2;
  srand(stime);
- printf("%d\n", rand());
  printf("Enter limits: ");//input
  scanf("%d %d", &a,&b);
  null(QTY_1,array_1);//output of arrays
