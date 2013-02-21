@@ -13,6 +13,7 @@ int filling(int a, int b, int qty, int *array); //functions prototypes
 int output(int qty, int *array);
 int null(int qty,int *array);
 int maximum(int qty, int *array, int *max);
+int arraysearch(
 
 int main(void)//main function
 {
