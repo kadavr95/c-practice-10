@@ -13,7 +13,7 @@ int filling(int a, int b, int qty, int *array); //functions prototypes
 int output(int qty, int *array);
 int null(int qty,int *array);
 int maximum(int qty, int *array, int *max);
-int arraysearch(
+int arraysearch(int qty, int *array);
 
 int main(void)//main function
 {
@@ -37,6 +37,8 @@ int main(void)//main function
  maximum(QTY_2,array_2,&max);
  output(QTY_3,array_3);
  maximum(QTY_3,array_3,&max);
+ filling(1,1,9,arraycount);
+ arraysearch(QTY_1,array_1);
  fflush(stdin);//waiting for the user
  getchar();
  return 0;
