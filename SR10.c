@@ -98,7 +98,7 @@ int maximum(int qty, int *array, int *max)
  *max=0;
  for (i = 1; i <=qty; i++)
  {
-  if (max>array[i-1])
+  if (*max<array[i-1])
   {
    *max=array[i-1];
   }
