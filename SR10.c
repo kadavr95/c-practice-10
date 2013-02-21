@@ -1,6 +1,7 @@
 //Exercise 10. Variant 3. Yaskovich Dmitry (T02-01c). Dimini Inc. (c)2013
 #include <stdio.h>//defining header files
 #include <stdlib.h>
+#include <time.h>
 
 #define QTY_1 10   //defining quantity of elements in arrays
 #define QTY_2 8
@@ -16,6 +17,12 @@ int maximum(int qty, int *array, int *max);
 int main(void)//main function
 {
  int a,b,array_1[QTY_1],array_2[QTY_2],array_3[QTY_3],max; //declaration of variables
+ int stime;
+ long int ltime;
+ ltime=time(NULL);
+ stime=(unsigned) ltime/2;
+ srand(stime);
+ printf("%d\n", rand());
  printf("Enter limits: ");//input
  scanf("%d %d", &a,&b);
  null(QTY_1,array_1);//output of arrays
