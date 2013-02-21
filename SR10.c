@@ -11,17 +11,25 @@ int arraycount[9];
 int filling(int a, int b, int qty, int *array); //functions prototypes
 int output(int qty, int *array);
 int null(int qty,int *array);
-int maximum(int qty, int *array, int max);
+int maximum(int qty, int *array, int *max);
 
 int main(void)//main function
 {
- int a,b,array_1[QTY_1],array_2[QTY_2],; //declaration of variables
+ int a,b,array_1[QTY_1],array_2[QTY_2],array_3[QTY_3],max; //declaration of variables
  printf("Enter limits: ");//input
  scanf("%d %d", &a,&b);
+ null(QTY_1,array_1);//output of arrays
+ null(QTY_2,array_2);
+ null(QTY_3,array_3);
  filling(a,b,QTY_1,array_1);//filling arrays with numbers
  filling(a,b,QTY_2,array_2);
+ filling(a,b,QTY_3,array_3);
  output(QTY_1,array_1);//output of arrays
+ maximum(QTY_1,array_1,&max);
  output(QTY_2,array_2);
+ maximum(QTY_2,array_2,&max);
+ output(QTY_3,array_3);
+ maximum(QTY_3,array_3,&max);
  fflush(stdin);//waiting for the user
  getchar();
  return 0;
@@ -32,7 +40,7 @@ int filling(int a, int b, int qty, int *array)//function of filling array
  int i;//declaration of variables
  for (i = 1; i <=qty; i++)//filling array
  {
-  array[i-1]=a+b*rand()/RAND_MAX;
+  array[i-1]=a+(b-a)*rand()/RAND_MAX;
  }
 }
 
@@ -82,4 +90,18 @@ int null(int qty, int *array)//function of
  {
   array[i-1]=0;
  }
+}
+
+int maximum(int qty, int *array, int *max)
+{
+ int i;
+ *max=0;
+ for (i = 1; i <=qty; i++)
+ {
+  if (max>array[i-1])
+  {
+   *max=array[i-1];
+  }
+ }
+ printf("Maximum: %d \n",*max);
 }
