@@ -16,6 +16,9 @@ int maximum(int qty, int *array, int *max);
 int main(void)//main function
 {
  int a,b,array_1[QTY_1],array_2[QTY_2],array_3[QTY_3],max; //declaration of variables
+ int *abc, n, i;
+scanf("%d", &n);
+abc = malloc(n*sizeof(int));
  printf("Enter limits: ");//input
  scanf("%d %d", &a,&b);
  null(QTY_1,array_1);//output of arrays
@@ -25,11 +28,12 @@ int main(void)//main function
  filling(a,b,QTY_2,array_2);
  filling(a,b,QTY_3,array_3);
  output(QTY_1,array_1);//output of arrays
- maximum(QTY_1,array_1,max);
+ maximum(QTY_1,array_1,&max);
  output(QTY_2,array_2);
- maximum(QTY_2,array_2,max);
+ maximum(QTY_2,array_2,&max);
  output(QTY_3,array_3);
- maximum(QTY_3,array_3,max);
+ maximum(QTY_3,array_3,&max);
+
  fflush(stdin);//waiting for the user
  getchar();
  return 0;
